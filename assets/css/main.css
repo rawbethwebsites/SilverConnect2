@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles for 50+ users */
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px; /* Larger base font for accessibility */
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen;
+    line-height: 1.6;
+  }
+  
+  /* High contrast focus states */
+  *:focus {
+    @apply outline-4 outline-blue-600 outline-offset-2;
+  }
+}
+
+@layer components {
+  /* Button styles optimized for 50+ users */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-200;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-6 border border-gray-200;
+  }
+  
+  /* Form input styles */
+  .form-input {
+    @apply w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+  
+  /* Large text for accessibility */
+  .text-accessible {
+    @apply text-lg leading-relaxed;
+  }
+}
